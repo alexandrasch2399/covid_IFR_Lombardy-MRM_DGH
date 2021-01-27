@@ -1,7 +1,7 @@
-# covid_IFR_Lombardy
+# covid_IFR_Lombardy-MRM_DGH
 Estimating the infection fatality rate of Covid-19 using demographics data and deaths records from Italy's hardest hit area
 
-All code within this repository is published under the MIT license (see LICENSE file).
+All code within this repository is published under the MIT license (see LICENSE file).  Original code from https://github.com/gianlucaRinaldi/covid_IFR_Lombardy Copyright (c) 2020 Gianluca Rinaldi. Additions and alterations made by Matthew R. MacLeod are Copyright (c) Her Majesty the Queen in Right of Canada, Department of National Defence, 2021.
 
 To replicate the exhibits in the paper, please set the workind directory of local downloaded project in "main.R" and then run it
 
