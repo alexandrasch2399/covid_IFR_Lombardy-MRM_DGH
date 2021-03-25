@@ -3,13 +3,22 @@ Estimating the infection fatality rate of Covid-19 using demographics data and d
 
 All code within this repository is published under the MIT license (see LICENSE file).  Original code from https://github.com/gianlucaRinaldi/covid_IFR_Lombardy Copyright (c) 2020 Gianluca Rinaldi. This code was published in relation to https://doi.org/10.1101/2020.04.18.20070912 "An empirical estimate of the infection fatality rate of COVID-19 from the first Italian outbreak" by Gianluca Rinaldi and Matteo Paradisi. 
 
-Additions and alterations made by Matthew R. MacLeod are Copyright (c) Her Majesty the Queen in Right of Canada, Department of National Defence, 2021. The additional code and alterations are published in support of "The Impact of Age Demographics on Interpreting and Applying
-Population-Wide Infection Fatality Rates for COVID-19" by Matthew R. MacLeod and D. Gregory Hunter, pending publication.
-
-To replicate the exhibits in the Rinaldi and Paradisi paper, please set the working directory of the local downloaded project in "main.R" and then run it
+Additions and alterations made by Matthew R. MacLeod are Copyright (c) Her Majesty the Queen in Right of Canada, Department of National Defence, 2021. The additional code and alterations are published in support of "The Impact of Age Demographics on Interpreting and Applying Population-Wide Infection Fatality Rates for COVID-19" by Matthew R. MacLeod and D. Gregory Hunter, pending publication.
 
 If using a Mac, rjags installation might not work immediately: please download and install JAGS from 
 https://sourceforge.net/projects/mcmc-jags/files/JAGS/4.x/Mac%20OS%20X/ 
-and then run "main.R" again
+and then run "main.R" again.
 
-The input for tables 1 and 2 is saved in the workspace as data.table objects table1Data and table2Data
+To replicate the exhibits in the Rinaldi and Paradisi paper, please set the working directory of the local downloaded project in "main.R" and then run it.  This will will store the input for tables 1 and 2 is in the workspace as data.table objects table1Data and table2Data, which are required to run the MacLeod and Hunter code.
+
+The original codebase from https://github.com/gianlucaRinaldi/covid_IFR_Lombardy contained a brief file entitled "oecdComparison.R" run by "main.R" that generates IFR estimates for OECD countries and plots in the file "IFRbyCountry.pdf", although this was not included in the Rinaldi and Paradisi pre-print. The MacLeod code extended this code in multiple directions to e.g., consider the estimated IFR of sub-national populations in Canada, and also incorporate IFR estimates from multiple other published studies on other source populations.
+
+"oecdComparison.R" will be run by "main.R", or can be re-run on its own after "main.R" is run to e.g., vary the figure options.  It produces Figures 1, 2 and 4 from the MacLeod and Hunter paper.  Its main purpose as used in that analysis is to compare the sum of weighted quantiles methods with the quantiles of a weighted sum.  
+
+
+Note that the Canadian population values were initially based on interim population estimates that
+ have since been adjusted to final totals, so do not exactly the values currently found at
+ Statistics Canada, Table 17-10-0005-01: Population estimates on July 1st, 
+ by age and sex. Accessed May 28, 2020, http://dx.doi.org/https://doi.org/10.25318/1710000501-eng.
+ The demographic share values for the Canadian Armed Forces (CAF) in the table are rounded from the
+ exact totals used in the published analysis, and exact population figures are not included. 
