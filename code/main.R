@@ -1,7 +1,7 @@
 # MIT License
 # 
 # Original work Copyright (c) 2020 Gianluca Rinaldi
-# Modified work Copyright (c) 2021 Her Majesty the Queen in Right of Canada, Department of National Defence, 2021.
+# Modified work Copyright (c) 2021 Her Majesty the Queen in Right of Canada, Department of National Defence
 # 
 # Permission is hereby granted, free of charge, to any person obtaining a copy
 # of this software and associated documentation files (the "Software"), to deal
