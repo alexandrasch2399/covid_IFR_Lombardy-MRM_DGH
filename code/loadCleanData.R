@@ -1,3 +1,27 @@
+# MIT License
+# 
+# Original work Copyright (c) 2020 Gianluca Rinaldi
+# Modified work Copyright (c) 2021 Her Majesty the Queen in Right of Canada, Department of National Defence, 2021.
+# 
+# Permission is hereby granted, free of charge, to any person obtaining a copy
+# of this software and associated documentation files (the "Software"), to deal
+# in the Software without restriction, including without limitation the rights
+# to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+# copies of the Software, and to permit persons to whom the Software is
+# furnished to do so, subject to the following conditions:
+#   
+#   The above copyright notice and this permission notice shall be included in all
+# copies or substantial portions of the Software.
+# 
+# THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+# IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+# FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+# AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+# LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+# OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+# SOFTWARE.
+
+
 #################################################################
 # Load and clean data
 #################################################################
@@ -5,8 +29,9 @@ relevantTowns <- c("Bertonico", "Codogno", "Castiglione d'Adda", "Casalpusterlen
 excludedTowns <- c("Bertonico") # Only Bertonico doesn't have death data for 2020 as of May 6 2020
 
 # This is only to reconstruct comune_giorno_relevant.csv from the original data (not uploaded to github for size limitations)
-deathsData <- fread("data/comuni_giornaliero-decessiUpTo30April.csv") 
-relevantTownsDeathsData <- deathsData[NOME_COMUNE %in% relevantTowns, ]
+# MRM - comment out below two lines that refer to a file that is not available
+#deathsData <- fread("data/comuni_giornaliero-decessiUpTo15April.csv") 
+#relevantTownsDeathsData <- deathsData[NOME_COMUNE %in% relevantTowns, ]
 #write.csv(relevantTownsDeathsData, file = "data/comune_giorno_relevant.csv")
 
 # Load deaths data

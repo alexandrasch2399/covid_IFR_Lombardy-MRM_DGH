@@ -125,7 +125,8 @@ ggplot() +
   theme(panel.grid.minor = element_blank())
 
 ggsave(filename = "output/deathsByDate.pdf")
-ggsave(filename = "../../Users/grinaldi/Dropbox/Apps/Overleaf/covid19 IFR/figures/deathsByDate.pdf")
+# MRM - comment out reference to inaccessible directory
+# ggsave(filename = "../../Users/grinaldi/Dropbox/Apps/Overleaf/covid19 IFR/figures/deathsByDate.pdf")
 
 ###############################################################
 # Bayesian estimates of infection fatality rates
@@ -140,7 +141,8 @@ ggplot(IFRPlot, aes(variable, value)) +
   theme(panel.grid.minor = element_blank())
 
 ggsave(filename = "output/IFRbyAge.pdf")
-ggsave(filename = "../../Users/grinaldi/Dropbox/Apps/Overleaf/covid19 IFR/figures/IFRbyAge.pdf")
+# MRM - comment out reference to inaccessible directory
+# ggsave(filename = "../../Users/grinaldi/Dropbox/Apps/Overleaf/covid19 IFR/figures/IFRbyAge.pdf")
 
 ###############################################################
 # Fatality rates for different assumptions on infection rates
@@ -174,7 +176,8 @@ ggplot(graphDataAll[prop > 10, ], aes(x = prop)) +
   scale_color_manual(values = palCustom, name = "Age Range") 
   
 ggsave(filename = "output/IFRbyProp.pdf")
-ggsave(filename = "../../Users/grinaldi/Dropbox/Apps/Overleaf/covid19 IFR/figures/IFRbyProp.pdf")
+# MRM - comment out reference to inaccessible directory
+# ggsave(filename = "../../Users/grinaldi/Dropbox/Apps/Overleaf/covid19 IFR/figures/IFRbyProp.pdf")
 
 ###############################################################
 # Extrapolation of age specific IFR to get overall by country
@@ -190,13 +193,15 @@ ggplot(data=popByAgeRange, aes(x= reorder(LOCATION, - overallIFRest), y = overal
   ylab("Estimated overall IFR") 
 
 ggsave(filename = "output/IFRbyCountry.pdf", width = 15, height = 7)
-ggsave(filename = "../../Users/grinaldi/Dropbox/Apps/Overleaf/covid19 IFR/figures/IFRbyCountry.pdf", width = 15, height = 7)
+# MRM - comment out reference to inaccessible directory
+# ggsave(filename = "../../Users/grinaldi/Dropbox/Apps/Overleaf/covid19 IFR/figures/IFRbyCountry.pdf", width = 15, height = 7)
 write.csv(popByAgeRange, "output/crossCountryIFREstimates.csv")
 
 ##############################################################
 # IFR Across countries and Case fatality rates
 ##############################################################
-dataWorld <- fread("/Github/covid_IFR_Lombardy/data/worldometerJune3.csv")
+# MRM - Adjust to relative directory rather than absolute
+dataWorld <- fread("data/worldometerJune3.csv")
 dataWorld[, LOCATION := countrycode(Country, origin = 'country.name', destination = 'iso3c')]
 dataWorld <- merge(dataWorld, popByAgeRange, by = "LOCATION")
 dataWorld[, cfr := Deaths/Cases]
@@ -211,7 +216,8 @@ ggplot(dataWorld[Tests_mln > 20000,], aes(overallIFRest, cfr, label = LOCATION))
   ylab("Reported CFR")
 summ(lm(cfr ~ overallIFRest, dataWorld[Tests_mln > 20000,]),robust =  T)
 ggsave(filename = "output/ifrCfr.pdf")
-ggsave(filename = "../../Users/grinaldi/Dropbox/Apps/Overleaf/covid19 IFR/figures/ifrCfr.pdf")
+# MRM - comment out reference to inaccessible directory
+# ggsave(filename = "../../Users/grinaldi/Dropbox/Apps/Overleaf/covid19 IFR/figures/ifrCfr.pdf")
 
 ##############################################################
 # Overall IFR assuming everyone got it and infection rate
