@@ -13,12 +13,11 @@ To replicate the exhibits in the Rinaldi and Paradisi paper, please set the work
 
 The original codebase from https://github.com/gianlucaRinaldi/covid_IFR_Lombardy contained a brief file entitled "oecdComparison.R" run by "main.R" that generates IFR estimates for OECD countries and plots in the file "IFRbyCountry.pdf", although this was not included in the Rinaldi and Paradisi pre-print. The MacLeod code extended this code in multiple directions to e.g., consider the estimated IFR of sub-national populations in Canada, and also incorporate IFR estimates from multiple other published studies on other source populations.
 
-"oecdComparison.R" will be run by "main.R", or can be re-run on its own after "main.R" is run to e.g., vary the figure options.  It produces Figures 1, 2 and 4 from the MacLeod and Hunter paper.  Its main purpose as used in that analysis is to compare the sum of weighted quantiles methods with the quantiles of a weighted sum.  
+"code/oecdComparison.R" will be run by "main.R", or can be re-run on its own after "main.R" is run to e.g., vary the figure options.  It produces Figures 1, 2 and 4 from the MacLeod and Hunter paper.  Its main purpose as used in that analysis is to compare the sum of weighted quantiles methods with the quantiles of a weighted sum.  
+
+"code/oecdComparisonMRM.MRM" must be run separately after "main.R", and produced Figures 3, 5 and 6 from the MacLeod and Hunter paper. These figures compare the different infection fatality rates (IFR) generated from multiple source papers applied to different populations and age bands.
+
+Note that the Canadian population values in "data/canInterim.csv" and "data/caninterim10.csv" were initially based on interim population estimates that have since been adjusted to final totals, so do not exactly the values currently found at Statistics Canada, Table 17-10-0005-01: Population estimates on July 1st, by age and sex. Accessed May 28, 2020, http://dx.doi.org/https://doi.org/10.25318/1710000501-eng. The demographic share values for the Canadian Armed Forces (CAF) in the table are rounded from the exact totals used in the published analysis, and exact population figures are not included. 
 
 
-Note that the Canadian population values were initially based on interim population estimates that
- have since been adjusted to final totals, so do not exactly the values currently found at
- Statistics Canada, Table 17-10-0005-01: Population estimates on July 1st, 
- by age and sex. Accessed May 28, 2020, http://dx.doi.org/https://doi.org/10.25318/1710000501-eng.
- The demographic share values for the Canadian Armed Forces (CAF) in the table are rounded from the
- exact totals used in the published analysis, and exact population figures are not included. 
+IFR estimates in "data/ifrVeritySalje.csv" are taken from "Verity R, Okell LC, Dorigatti I, Winskill P, Whittaker C, Imai N, Cuomo-Dannenburg G, et al. (2020a) Estimates of the severity of coronavirus disease 2019: A model-based analysis. Lancet Infectious Diseases 20(6):669–677" and "Salje H, Tran Kiem C, Lefrancq N, Courtejoie N, Bosetti P, Paireau J, Andronico A, et al. (2020a) Estimating the burden of SARS-CoV-2 in France. Science 369(6500):208–211" (as well as its revision).

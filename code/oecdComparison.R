@@ -57,7 +57,7 @@ popByAgeRange <- oecdDemCln[! is.na(ageRange), sum(obsValue), by = c("LOCATION",
 popByAgeRange <- merge(popByAgeRange, oecdDemCln[AGE %in% c("TOTAL"), c("LOCATION", "obsValue")], by = "LOCATION")
 popByAgeRange[, share := V1/obsValue]
 
-# Pull out core elements of the table
+# MRM - Pull out core elements of the table
 popByAgeRangeInterim <- popByAgeRange %>% select(-V1,-obsValue)
 
 
