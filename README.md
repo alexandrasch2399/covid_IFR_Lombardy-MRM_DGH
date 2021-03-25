@@ -15,7 +15,7 @@ The original codebase from https://github.com/gianlucaRinaldi/covid_IFR_Lombardy
 
 "code/oecdComparison.R" will be run by "main.R", or can be re-run on its own after "main.R" is run to e.g., vary the figure options.  It produces Figures 1, 2 and 4 from the MacLeod and Hunter paper.  Its main purpose as used in that analysis is to compare the sum of weighted quantiles methods with the quantiles of a weighted sum.  
 
-"code/oecdComparisonMRM.MRM" must be run separately after "main.R", and produced Figures 3, 5 and 6 from the MacLeod and Hunter paper. These figures compare the different infection fatality rates (IFR) generated from multiple source papers applied to different populations and age bands.
+"code/oecdComparisonMRM.R" must be run separately after "main.R", and produced Figures 3, 5 and 6 from the MacLeod and Hunter paper. These figures compare the different infection fatality rates (IFR) generated from multiple source papers applied to different populations and age bands.
 
 Note that the Canadian population values in "data/canInterim.csv" and "data/caninterim10.csv" were initially based on interim population estimates that have since been adjusted to final totals, so do not exactly the values currently found at Statistics Canada, Table 17-10-0005-01: Population estimates on July 1st, by age and sex. Accessed May 28, 2020, http://dx.doi.org/https://doi.org/10.25318/1710000501-eng. The demographic share values for the Canadian Armed Forces (CAF) in the table are rounded from the exact totals used in the published analysis, and exact population figures are not included. 
 
